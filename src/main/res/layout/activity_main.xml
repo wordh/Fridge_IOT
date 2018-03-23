@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    tools:context="com.example.asus.hello.RealActivity"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/my_toolbar"
+        layout="@layout/toolbar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Image 1"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_above="@+id/imageView2"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Image 2"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:id="@+id/textView"
+        android:layout_above="@+id/image_two"
+        android:layout_toLeftOf="@+id/button"
+        android:layout_toStartOf="@+id/button" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="320dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/divider"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:src="@drawable/image_two"
+        android:scaleType="centerCrop"
+        android:padding="20dp" />
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/image_two"
+        android:layout_width="320dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/divider"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:src="@drawable/image_one"
+        android:scaleType="centerCrop"
+        android:padding="20dp" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/mybutton"
+        android:text="capture"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15sp"
+        android:onClick="downloadImage"
+        />
+
+
+</RelativeLayout>
